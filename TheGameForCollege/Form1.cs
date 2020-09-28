@@ -12,6 +12,24 @@ namespace TheGameForCollege
 {
     public partial class Form1 : Form
     {
+        public void end()
+        {
+            pbRoad1.Visible = false;
+            pbRoad2.Visible = false;
+            btnStart.Visible = false;
+            pbPC.Visible = false;
+            pbFinish.Visible = false;
+            pbFinish.Visible = false;
+            plFinish.Visible = false;
+            pbPlayer.Visible = false;
+            lblTrafficLights.Visible = false;
+            pbTrafficLights.Visible = false;
+            btnMove.Visible = false;
+            btnMove.Visible = false;
+            timerForMove.Enabled = false;
+            timerForTraLie.Enabled = false;
+            lblResult.Visible = true;
+        }
         int i = 3;
         int k = 0;
         int color = 2;
@@ -73,7 +91,7 @@ namespace TheGameForCollege
         {
             if (color == 1)
             {
-                pbPlayer.Left -= 9;
+                pbPlayer.Left -= 100;
             }
             else
             {
@@ -89,41 +107,13 @@ namespace TheGameForCollege
             }
             if (pbPlayer.Location.X <= plFinish.Location.X)
             {
-                pbRoad1.Visible = false;
-                pbRoad2.Visible = false;
-                btnStart.Visible = false;
-                pbPC.Visible = false;
-                pbFinish.Visible = false;
-                pbFinish.Visible = false;
-                plFinish.Visible = false;
-                pbPlayer.Visible = false;
-                lblTrafficLights.Visible = false;
-                pbTrafficLights.Visible = false;
-                btnMove.Visible = false;
-                btnMove.Visible = false;
-                timerForMove.Enabled = false;
-                timerForTraLie.Enabled = false;
-                lblResult.Visible = true;
+                end();
                 lblResult.Text = "Вы выиграли";
             }
             if (pbPC.Location.X <= plFinish.Location.X)
             {
-                pbRoad1.Visible = false;
-                pbRoad2.Visible = false;
-                btnStart.Visible = false;
-                pbPC.Visible = false;
-                pbFinish.Visible = false;
-                pbFinish.Visible = false;
-                plFinish.Visible = false;
-                pbPlayer.Visible = false;
-                lblTrafficLights.Visible = false;
-                pbTrafficLights.Visible = false;
-                btnMove.Visible = false;
-                btnMove.Visible = false;
-                timerForMove.Enabled = false;
-                timerForTraLie.Enabled = false;
-                lblResult.Visible = true;
-                lblResult.Text = "Вы выиграли";
+                end();
+                lblResult.Text = "Вы проиграли";
             }
         }
     }
